@@ -1,0 +1,11 @@
+:80 {
+	handle_path /service1/* {
+		reverse_proxy localhost:5000
+	}
+	handle_path /service2/* {
+		reverse_proxy localhost:5001
+	}
+	handle {
+		respond "Hello, World!"
+	}
+}
